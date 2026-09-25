@@ -1,0 +1,6 @@
+{
+  "name": "Namma Theatre Food",
+  "description": "Mobile-first cinema in-seat food and beverage ordering platform with QR seat detection, interactive menu, demo payment, digital bill, and real-time staff admin order console.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

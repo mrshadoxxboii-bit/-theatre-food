@@ -1,0 +1,94 @@
+{
+  "entities": {
+    "Order": {
+      "title": "Order",
+      "description": "Theatre in-seat food order placed by cinema patrons",
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string",
+          "description": "Unique identifier for the order"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Customer full name"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Customer phone number"
+        },
+        "theatreName": {
+          "type": "string",
+          "description": "Theatre venue name"
+        },
+        "screenNumber": {
+          "type": "string",
+          "description": "Auditorium screen number e.g. 1"
+        },
+        "seatNumber": {
+          "type": "string",
+          "description": "Auditorium seat number e.g. B12"
+        },
+        "items": {
+          "type": "array",
+          "description": "Ordered food and drink items with quantities and prices"
+        },
+        "totalAmount": {
+          "type": "number",
+          "description": "Grand total in INR"
+        },
+        "subtotal": {
+          "type": "number",
+          "description": "Subtotal before taxes"
+        },
+        "taxAmount": {
+          "type": "number",
+          "description": "GST/tax amount"
+        },
+        "orderStatus": {
+          "type": "string",
+          "description": "Order status: Pending, Preparing, Ready, Delivered, Cancelled"
+        },
+        "status": {
+          "type": "string",
+          "description": "Order status alias: Pending, Preparing, Ready, Delivered, Cancelled"
+        },
+        "paymentStatus": {
+          "type": "string",
+          "description": "Payment status: demo_paid or paid"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "description": "Selected payment method"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp ISO string"
+        },
+        "customerNotes": {
+          "type": "string",
+          "description": "Optional notes for kitchen or runner"
+        }
+      },
+      "required": [
+        "orderId",
+        "seatNumber",
+        "screenNumber",
+        "items",
+        "totalAmount",
+        "orderStatus",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Collection of customer cinema in-seat food orders"
+    },
+    "/ORDERS/{orderId}": {
+      "schema": "Order",
+      "description": "Collection of customer cinema in-seat food orders (uppercase)"
+    }
+  }
+}

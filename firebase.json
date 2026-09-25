@@ -1,0 +1,36 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "hosting": {
+    "public": "dist",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/me/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/me",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/menu/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/menu",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
